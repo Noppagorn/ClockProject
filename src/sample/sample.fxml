@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <GridPane prefHeight="257.0" prefWidth="405.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="showTime" alignment="CENTER" contentDisplay="CENTER" onDragDetected="#running" onDragDone="#running" prefHeight="86.0" prefWidth="428.0" text="Label" textAlignment="CENTER">
+               <font>
+                  <Font size="96.0" />
+               </font>
+            </Label>
+            <GridPane prefHeight="257.0" prefWidth="405.0" GridPane.rowIndex="2">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="342.33331298828125" minWidth="10.0" prefWidth="46.99999364217123" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="342.33331298828125" minWidth="10.0" prefWidth="81.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="342.33331298828125" minWidth="0.33328501383462594" prefWidth="42.6666259765625" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="342.33331298828125" minWidth="10.0" prefWidth="83.3333740234375" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.33327738444007" minWidth="10.0" prefWidth="14.666681925455748" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.33327738444007" minWidth="10.0" prefWidth="101.99998474121094" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.33327738444007" minWidth="10.0" prefWidth="76.3333740234375" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TextField fx:id="hourTextField" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="51.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="minuteTextField" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Button fx:id="buttonToSetTime" mnemonicParsing="false" onAction="#handleButtonToSetTime" prefHeight="25.0" prefWidth="74.0" text="Button" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                  <Button fx:id="stopAlarm" mnemonicParsing="false" onAction="#handlestopButton" prefHeight="25.0" prefWidth="56.0" text="Stop" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <Label fx:id="timeAlarm" onDragDetected="#initialize" prefHeight="86.0" prefWidth="305.0" text="timeAlarm" GridPane.rowIndex="1">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+</GridPane>
